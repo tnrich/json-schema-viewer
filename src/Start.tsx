@@ -87,19 +87,24 @@ export class StartWR extends React.PureComponent<StartProps, StartState> {
     const { history } = this.props;
 
     const handleOnClick = () => {
+      if (this.state.urlInput?.includes("{") && this.state.urlInput?.includes("}")) {
+        localStorage.setItem('jsonInput', this.state.urlInput || '');
+        history.push(`/view/${encodeURIComponent('#')}?url="local"`);
+        return;
+      } 
+      localStorage.removeItem('jsonInput');
       history.push(`/view/${encodeURIComponent('#')}?url=${encodeURIComponent(this.state.urlInput || '')}`);
     };
 
     const onTextChange: React.FormEventHandler<HTMLInputElement> = e => {
       const currentValue = e.currentTarget.value;
-      console.log('currentValue', currentValue);
       this.setState(() => ({ urlInput: currentValue || '' }));
     }
 
     return (
       <EmptyState
         header="Load a JSON Schema"
-        description={`Put in the url to the JSON schema that you want to see documented here.`}
+        description={`Paste your json schema or put in the url to the JSON schema that you want to see documented here.`}
         primaryAction={(
           <StartWR.InputWidth>
             <TextField isCompact={false} value={this.state.urlInput || ''} onChange={onTextChange} />

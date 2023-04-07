@@ -1,5 +1,4 @@
 import { AtlassianNavigation, Create, ProductHome } from '@atlaskit/atlassian-navigation';
-import { AtlassianIcon, AtlassianLogo } from '@atlaskit/logo';
 import React from 'react';
 import { Redirect, Route, RouteComponentProps, Switch, useHistory, withRouter } from 'react-router-dom';
 import { LoadSchema } from './LoadSchema';
@@ -13,7 +12,7 @@ import { Docs } from './Docs';
 import { getRecentlyViewedLinks, RecentlyViewedLink } from './recently-viewed';
 
 const JsonSchemaHome = () => (
-  <ProductHome icon={AtlassianIcon} logo={AtlassianLogo} siteTitle="JSON Schema Viewer" />
+  <ProductHome icon={function Logo() {return <div/>}} logo={function Logo() {return <div/>}} siteTitle="JSON Schema Viewer" />
 );
 
 type NavigationButtonItemProps = {
