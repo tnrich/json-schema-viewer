@@ -18,9 +18,8 @@ rendered beautifully, comprehensively and with examples describing the JSON you 
 To run this project locally:
 
 1. Run `yarn` to install the dependencies.
-1. Run `yarn gen-schema` to generate source from schema.
-1. In one terminal, run `yarn http-serve`
-1. In another terminal, run `yarn build-dev --watch`
+2. In one terminal, run `yarn http-serve`
+3. In another terminal, run `yarn build-dev --watch`
 
 Now open: http://localhost:8081 to see the site and develop it live.
 
