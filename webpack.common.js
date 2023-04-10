@@ -29,13 +29,13 @@ module.exports = {
   },
   output: {
     filename: 'bundle.[chunkhash].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'JSON Schema Viewer',
       template: 'index.html',
-      publicPath: '/',
+      publicPath: './',
       filename: 'index.html'
     }),
     new CspHtmlWebpackPlugin({
@@ -52,7 +52,7 @@ module.exports = {
     }),
     new FaviconsWebpackPlugin({
       logo: './src/logo.svg',
-      publicPath: '/',
+      publicPath: './',
       prefix: 'auto/[contenthash]'
     })
   ]

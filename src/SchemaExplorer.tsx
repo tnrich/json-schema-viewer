@@ -94,15 +94,15 @@ const SEPHead: React.FC<SEPHeadProps> = (props) => {
     props.onExpandClick();
   };
 
-  const ActionButton = props.path.length <= 1
-    ? <h1>Root</h1>
-    : (
-      <LinkPreservingSearch to={linkTo(props.basePathSegments, init(props.path.map(p => p.reference)))} component={BackButton} />
-    );
+  // const ActionButton = props.path.length <= 1
+  //   ? <h1>Root</h1>
+  //   : (
+  //     <LinkPreservingSearch to={linkTo(props.basePathSegments, init(props.path.map(p => p.reference)))} component={BackButton} />
+  //   );
 
   return (
     <Head>
-      <div>{ActionButton}</div>
+      {/* <div>{ActionButton}</div> */}
       <Path>
         <BreadcrumbsStateless
           isExpanded={props.pathExpanded}
@@ -514,8 +514,8 @@ export class SchemaExplorer extends React.PureComponent<SchemaExplorerProps, Sch
           onExpandClick={() => this.onExpandClick()}
         />
         <SchemaExplorer.HeadingContainer>
-          <SchemaExplorer.Heading>{getTitle(currentPathElement.reference, schema)}</SchemaExplorer.Heading>
-          <Permalink />
+          {/* <SchemaExplorer.Heading>{getTitle(currentPathElement.reference, schema)}</SchemaExplorer.Heading> */}
+          {/* <Permalink /> */}
         </SchemaExplorer.HeadingContainer>
         <Tabs tabs={tabData} selected={ViewTypeToTab[this.state.view || 'details']} onSelect={onTabSelect} />
       </SchemaExplorer.Container>

@@ -1,10 +1,10 @@
 # json-schema-viewer
+Welcome to Teselagen's JSON Schema Viewer! (All credit for the original functionality goes to https://github.com/atlassian-labs/json-schema-viewer)
 
-[![Atlassian license](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
-
-Welcome to JSON Schema Viewer!
+This site is used to host and view JSON Schemas for Teselagen's software.
 
 Try it out today at: https://json-schema.app
+
 
 JSON Schema is awesome. It lets you define and validate the schema for your JSON object and is used to define many many JSON structures. 
 For example schemas, please see: https://www.schemastore.org/json/ 
@@ -22,42 +22,13 @@ To run this project locally:
 1. In one terminal, run `yarn http-serve`
 1. In another terminal, run `yarn build-dev --watch`
 
-Now open: http://localhost:8080 to see the site and develop it live.
+Now open: http://localhost:8081 to see the site and develop it live.
 
 ## Deployment
 
-To publish new SPA website resources to this AWS stack (this is the most common operation you will perform):
+yarn build-dev
 
-``` shell
-nix-shell -p awscli2
-yarn build-and-upload
-```
+commit your changes
+then push to master 
 
-To deploy this project in a way that updates the AWS Configuration via Cloud Formation:
-
-``` shell
-nix-shell -p awscli2
-yarn build-and-deploy
-```
-
-## Documentation
-
-This project is a React SPA that is designed to be deployed to AWS CloudFront. It implements a Schema Explorer for JSON Schema and does not build an abstraction
-layer between JSON Schema and the UI layer. We currently support JSON Schema Draft 07 in the code.
-
-## Tests
-
-There are currently no tests for this project. Instead, we use and browse the react storybooks to ensure that the schema is being rendered correctly.
-
-## Contributions
-
-Contributions to json-schema-viewer are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details. 
-
-## License
-
-Copyright (c) 2021 Atlassian and others.
-Apache 2.0 licensed, see [LICENSE](LICENSE) file.
-
-<br/> 
-
-[![With ❤️ from Atlassian](https://raw.githubusercontent.com/atlassian-internal/oss-assets/master/banner-cheers.png)](https://www.atlassian.com)
+this should update the gh pages site

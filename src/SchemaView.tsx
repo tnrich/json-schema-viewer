@@ -93,7 +93,7 @@ export class SchemaViewWR extends React.PureComponent<SchemaViewProps> {
 
     return (
       <SchemaViewWR.Container>
-        <SideNavWithRouter basePathSegments={basePathSegments} links={extractLinks(schema, lookup)} />
+        {/* <SideNavWithRouter basePathSegments={basePathSegments} links={extractLinks(schema, lookup)} /> */}
         <SchemaExplorer
           basePathSegments={basePathSegments}
           path={path}
