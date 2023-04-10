@@ -39,7 +39,8 @@ const Head = styled.div`
 `;
 
 const Path = styled.div`
-    padding-left: 20px;
+    padding-left: 6px;
+    padding-bottom: 10px;
 
     a {
       color: inherit;
@@ -54,10 +55,11 @@ const Path = styled.div`
 function getObjectPath(basePathSegments: Array<string>, path: PathElement[]): JSX.Element[] {
   return path.map((pe, i) => (
     <BreadcrumbsItem
+    
       key={`${pe.title}-${i}`}
       text={pe.title}
       component={() => (
-        <NavLinkPreservingSearch to={linkTo(basePathSegments, path.slice(0, i+1).map(p => p.reference))}  exact={true}>
+        <NavLinkPreservingSearch style={{fontSize: 20}} to={linkTo(basePathSegments, path.slice(0, i+1).map(p => p.reference))}  exact={true}>
           {getTitle(pe.reference, { title: pe.title !== 'object' ? pe.title : undefined })}
         </NavLinkPreservingSearch>
       )}
@@ -492,12 +494,14 @@ export class SchemaExplorer extends React.PureComponent<SchemaExplorerProps, Sch
       content: (
         <SchemaExplorerExample schema={schema} lookup={lookup} stage={stage} format="json" />
       )
-    }, {
-      label: 'Example (YAML)',
-      content: (
-        <SchemaExplorerExample schema={schema} lookup={lookup} stage={stage} format="yaml" />
-      )
-    }];
+    }, 
+    // {
+    //   label: 'Example (YAML)',
+    //   content: (
+    //     <SchemaExplorerExample schema={schema} lookup={lookup} stage={stage} format="yaml" />
+    //   )
+    // }
+  ];
 
     const onTabSelect: OnSelectCallback = tab => {
       this.setState({

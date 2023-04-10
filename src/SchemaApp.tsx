@@ -36,7 +36,7 @@ const JsonSchemaHome = () => (
     logo={function Logo() {
       return <div />;
     }}
-    siteTitle="TeselaGen Schema Viewer"
+    siteTitle="TeselaGen JSON Schemas"
   />
 );
 
@@ -90,11 +90,10 @@ const RecentlyViewedMenu: React.FC<RecentlyViewedMenuProps> = (props) => {
 
 const ExampleMenu: React.FC<ContentPropsWithClose> = (props) => (
   <PopupMenuGroup>
-    <Section title="Zonk examples">
+    <Section title="Schemas">
       <NavigationButtonItem
         onClick={props.closePopup}
         exampleUrl="./schemas/design.json"
-        
       >
         Design
       </NavigationButtonItem>
@@ -102,42 +101,8 @@ const ExampleMenu: React.FC<ContentPropsWithClose> = (props) => (
         onClick={props.closePopup}
         exampleUrl="./schemas/dna_sequence.json"
       >
-        OpenAPI (v3)
+        DNA Sequence
       </NavigationButtonItem>
-      <NavigationButtonItem
-        onClick={props.closePopup}
-        exampleUrl="https://json.schemastore.org/swagger-2.0"
-      >
-        Swagger (v2)
-      </NavigationButtonItem>
-      <NavigationButtonItem
-        onClick={props.closePopup}
-        exampleUrl="https://json.schemastore.org/package"
-      >
-        package.json
-      </NavigationButtonItem>
-    </Section>
-    <Section title="JSON Schema Meta Schemas">
-      <NavigationButtonItem
-        onClick={props.closePopup}
-        exampleUrl="https://json-schema.org/draft-07/schema"
-      >
-        Draft-07
-      </NavigationButtonItem>
-      <NavigationButtonItem
-        onClick={props.closePopup}
-        exampleUrl="https://json-schema.org/draft-04/schema"
-      >
-        Draft-04
-      </NavigationButtonItem>
-    </Section>
-    <Section title="Schema repositories">
-      <NewTabLinkItem
-        href="https://www.schemastore.org/"
-        onClick={props.closePopup}
-      >
-        Schemastore Repository
-      </NewTabLinkItem>
     </Section>
   </PopupMenuGroup>
 );
@@ -162,9 +127,9 @@ const HelpMenu: React.FC<ContentPropsWithClose> = (props) => {
         >
           Introduction
         </LinkItem>
-        <ButtonItem onClick={goTo("/docs/usage")}>
+        {/* <ButtonItem onClick={goTo("/docs/usage")}>
           Linking your schema
-        </ButtonItem>
+        </ButtonItem> */}
         <NewTabLinkItem
           href="http://json-schema.org/understanding-json-schema/"
           onClick={props.closePopup}
@@ -174,13 +139,13 @@ const HelpMenu: React.FC<ContentPropsWithClose> = (props) => {
       </Section>
       <Section title="Contribute">
         <NewTabLinkItem
-          href="https://github.com/atlassian-labs/json-schema-viewer/issues/new"
+          href="https://github.com/tnrich/json-schema-viewer/issues/new"
           onClick={props.closePopup}
         >
           Raise issue
         </NewTabLinkItem>
         <NewTabLinkItem
-          href="https://github.com/atlassian-labs/json-schema-viewer"
+          href="https://github.com/tnrich/json-schema-viewer"
           onClick={props.closePopup}
         >
           View source code
@@ -251,7 +216,7 @@ class SchemaAppWR extends React.PureComponent<
         <AtlassianNavigation
           label="Json schema viewer header"
           primaryItems={primaryItems}
-          renderCreate={NewSchema}
+          // renderCreate={NewSchema}
           renderProductHome={JsonSchemaHome}
         />
         <Switch>

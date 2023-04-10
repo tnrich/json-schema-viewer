@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://raw.githubusercontent.com/TeselaGen/ve-sequence-parsers/master/schemas/design.json",
+  "description": "A schema for a Design object in the Teselagen application. Designs are used to put fragments of DNA sequences together in a specific order. They can either be a combinatorial design or a list design (1 row = 1 construct).",
   "type": "object",
   "title": "Design",
   "properties": {
@@ -57,10 +58,6 @@
             "items": {
               "type": "object",
               "properties": {
-                "index": {
-                  "type": "integer",
-                  "examples": [0, 1, 2]
-                },
                 "name": {
                   "type": "string",
                   "examples": ["part A", "part B", "part C"]
@@ -75,7 +72,6 @@
                   "examples": ["DIGEST", "PCR", null]
                 }
               },
-              "required": ["index"],
               "additionalProperties": false
             },
             "minItems": 1
@@ -85,7 +81,7 @@
             "examples": [true, false]
           }
         },
-        "required": ["index", "name", "icon", "direction", "parts"],
+        "required": ["name", "icon", "direction", "parts"],
         "additionalProperties": false
       }
     },

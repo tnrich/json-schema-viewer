@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
   entry: './src/index.ts',
@@ -49,11 +48,6 @@ module.exports = {
     new webpack.EnvironmentPlugin({
       ANALYTICS_NEXT_MODERN_CONTEXT: true,
       NODE_ENV: 'development'
-    }),
-    new FaviconsWebpackPlugin({
-      logo: './src/logo.svg',
-      publicPath: './',
-      prefix: 'auto/[contenthash]'
     })
   ]
 };

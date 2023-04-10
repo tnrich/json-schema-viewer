@@ -1,5 +1,5 @@
 # json-schema-viewer
-Welcome to Teselagen's JSON Schema Viewer! (All credit for the original functionality goes to https://github.com/atlassian-labs/json-schema-viewer)
+Welcome to Teselagen's JSON Schema Viewer! (All credit for the original functionality goes to https://github.com/tnrich/json-schema-viewer)
 
 This site is used to host and view JSON Schemas for Teselagen's software.
 
