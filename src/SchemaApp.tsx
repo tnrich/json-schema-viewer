@@ -29,15 +29,9 @@ import { Docs } from "./Docs";
 import { getRecentlyViewedLinks, RecentlyViewedLink } from "./recently-viewed";
 
 const JsonSchemaHome = () => (
-  <ProductHome
-    icon={function Logo() {
-      return <div />;
-    }}
-    logo={function Logo() {
-      return <div />;
-    }}
-    siteTitle="TeselaGen JSON Schemas"
-  />
+  <a style={{ color: "#172B4D", fontSize: 20, marginRight: 20 }} href="/">
+    TeselaGen JSON Schemas{" "}
+  </a>
 );
 
 type NavigationButtonItemProps = {
@@ -221,7 +215,7 @@ class SchemaAppWR extends React.PureComponent<
         />
         <Switch>
           <Route exact={true} path="/">
-            <Redirect to="/start" />
+            <Redirect to="/docs/introduction" />
           </Route>
           <Route exact={true} path="/start">
             <Start />
