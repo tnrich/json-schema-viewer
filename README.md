@@ -30,4 +30,4 @@ yarn build-dev
 commit your changes
 then push to master 
 
-this should update the gh pages site
+This should update the gh pages site

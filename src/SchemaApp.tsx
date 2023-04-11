@@ -28,11 +28,25 @@ import { ContentPropsWithClose, PrimaryDropdown } from "./PrimaryDropdown";
 import { Docs } from "./Docs";
 import { getRecentlyViewedLinks, RecentlyViewedLink } from "./recently-viewed";
 
-const JsonSchemaHome = () => (
-  <a style={{ color: "#172B4D", fontSize: 20, marginRight: 20 }} href="/">
-    TeselaGen JSON Schemas{" "}
-  </a>
-);
+const JsonSchemaHome = () => {
+  const goTo = (location: string) => {
+    const history = useHistory();
+    return (e: React.MouseEvent | React.KeyboardEvent) => {
+      e.preventDefault();
+      history.push(location);
+    };
+  };
+
+  return (
+    <a
+      style={{ color: "#172B4D", fontSize: 20, marginRight: 20 }}
+      href="/"
+      onClick={goTo("/")}
+    >
+      TeselaGen JSON Schemas{" "}
+    </a>
+  );
+};
 
 type NavigationButtonItemProps = {
   exampleUrl: string;
