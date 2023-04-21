@@ -18,14 +18,15 @@ rendered beautifully, comprehensively and with examples describing the JSON you 
 To run this project locally:
 
 1. Run `yarn` to install the dependencies.
-2. In one terminal, run `yarn http-serve`
-3. In another terminal, run `yarn build-dev --watch`
+2. In one terminal, run `yarn start` 
+3. In another terminal, run `yarn http-serve`
 
 Now open: http://localhost:8081 to see the site and develop it live.
 
 ## Deployment
 
-yarn build-dev
+Make sure you've run yarn start to get the built files. 
+yarn start
 
 commit your changes
 then push to master 
