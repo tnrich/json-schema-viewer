@@ -27,17 +27,15 @@ For example schemas, please see: https://www.schemastore.org/json/
 To run this project locally:
 
 1. Run `yarn` to install the dependencies.
-2. In one terminal, run `yarn start`
-3. In another terminal, run `yarn http-serve`
+2. Run `yarn start`
 
 Now open: http://localhost:8081 to see the site and develop it live.
 
 ## Deployment
 
-Make sure you've run the project locally to get the built files.
-yarn start
+1. Make sure you've run the project locally to get the built files.
+2. Commit your changes (their should be changes under the built docs folder)
+3. Push to master
 
-commit your changes (their should be changes under the built docs folder)
-then push to master
+This should update the gh pages site here https://tnrich.github.io/json-schema-viewer
 
-This should update the gh pages site
