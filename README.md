@@ -8,7 +8,7 @@ Try it out today at: https://json-schema.app
 
 ## Adding a schema
 
-Just add a new schema to the `schemas` folder and add a link to it in `<SchemaApp>` like so:
+Just add a new schema to the `schemas` folder and add a link to it in `<SchemaApp>` by adding a new button:
 
 ```jsx
 <NavigationButtonItem
