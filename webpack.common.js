@@ -1,3 +1,4 @@
+const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
@@ -31,6 +32,11 @@ module.exports = {
     path: path.resolve(__dirname, 'docs'),
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: "schemas/", to: "schemas/" },
+      ],
+    }),
     new HtmlWebpackPlugin({
       title: 'JSON Schema Viewer',
       template: 'index.html',

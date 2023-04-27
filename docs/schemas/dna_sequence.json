@@ -79,5 +79,5 @@
     "name": { "type": "string" },
     "sequence": { "type": "string" }
   },
-  "required": ["parts", "features", "name", "sequence", "primers"]
+  "required": ["name", "sequence"]
 }

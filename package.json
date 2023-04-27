@@ -52,6 +52,7 @@
     "@types/throttle-debounce": "^2.1.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "copy-webpack-plugin": "6.x.x",
     "csp-html-webpack-plugin": "^5.1.0",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^5.0.0-beta.4",
@@ -71,8 +72,6 @@
   },
   "scripts": {
     "start": "webpack -c webpack.dev.js --watch",
-    "build-prod": "webpack -c webpack.prod.js",
-    "build": "rm -fr docs && webpack -c webpack.prod.js",
     "clean": "rm -rf *.zip source/witch/nodejs/node_modules/",
     "storybook": "start-storybook -p 6006",
     "gen-schema": "json2ts json-schema.draft-07.json > src/schema.ts",

@@ -64,7 +64,6 @@ export class SchemaViewWR extends React.PureComponent<SchemaViewProps> {
   private static EditorContainerHeading = styled.h3`
     position: fixed;
     top: 0px;
-    z-index: -100;
   `;
 
   public render() {
